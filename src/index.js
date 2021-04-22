@@ -7,6 +7,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
 
+const store = createStore(applyMiddleware(thunk))
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
