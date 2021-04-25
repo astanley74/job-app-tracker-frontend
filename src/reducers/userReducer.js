@@ -1,5 +1,5 @@
-const userReducer = () => {
-
+const userReducer = (state = {users: []}, action) => {
+    return state
 }
 
 export default userReducer
