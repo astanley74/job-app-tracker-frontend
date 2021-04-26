@@ -2,6 +2,7 @@ import React from 'react';
 import {Modal, Button, Form} from 'react-bootstrap'
 import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
+import User from '../components/User'
 
 
 class LoginModal extends React.Component {
@@ -12,7 +13,8 @@ class LoginModal extends React.Component {
         first_name: "",
         last_name: "",
         email: "",
-        showModal: true
+        showModal: true,
+        isSubmitted: false
       }
     }
 
@@ -44,9 +46,9 @@ class LoginModal extends React.Component {
     render() {
         return (
           <div>
-            <Modal show={this.state.showModal} onHide={this.close}>
-              <Modal.Header closeButton>
-                <Modal.Title>Login Or Sign Up!</Modal.Title>
+            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+              <Modal.Header>
+                <Modal.Title id="contained-modal-title-vcenter">Login Or Sign Up!</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form onSubmit={this.handleOnSubmit}>
@@ -73,6 +75,7 @@ class LoginModal extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
+            {this.state.isSubmitted && <User/>}
           </div>
         );
       }
