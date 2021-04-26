@@ -11,8 +11,7 @@ class User extends React.Component {
                 <Jumbotron>
                     <h1>{this.props.user.first_name} {this.props.user.last_name}</h1>
                         <p>
-                            This is a simple hero unit, a simple jumbotron-style component for calling
-                            extra attention to featured content or information.
+                            Welcome to your job application portal. All of your current job applications are listed below.
                         </p>
                 </Jumbotron>
             </div>
