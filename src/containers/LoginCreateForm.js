@@ -24,7 +24,7 @@ class LoginCreateForm extends React.Component {
     }
 
     handleOnSubmit = event => {
-
+        event.preventDefault();
     }
 
     render() {
