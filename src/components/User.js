@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import NavBar from './Navbar'
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import JobApplicationsContainer from '../containers/JobApplicationsContainer'
 
 class User extends React.Component {
     render() {
@@ -14,6 +15,7 @@ class User extends React.Component {
                             Welcome to your job application portal. All of your current job applications are listed below.
                         </p>
                 </Jumbotron>
+                <JobApplicationsContainer/>
             </div>
         )
     }

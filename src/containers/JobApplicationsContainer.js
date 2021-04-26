@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 class JobApplicationsContainer extends React.Component {
     render() {
         return(
-            <div>{console.log(this.props.user)}</div>
+            <div>{console.log(this.props.user.job_applications)}</div>
         )
     }
 }
