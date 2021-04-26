@@ -1,5 +1,10 @@
-const userReducer = (state = {users: []}, action) => {
-    return state
+const userReducer = (state = {user: {}}, action) => {
+    switch(action.type) {
+        case "ADD_USER":
+            return { user: action.payload}
+        default: 
+            return state
+    }
 }
 
 export default userReducer
