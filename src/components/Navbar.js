@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import '../components/Link.css'
 
 const NavBar = () => {
     return (
@@ -9,8 +10,8 @@ const NavBar = () => {
                 <Navbar.Brand Link to ="/home">JobTracker</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Link to="/home">Home</Link>
-                    <Nav.Link href="#about">About</Nav.Link>
-                    <Nav.Link href="#job-apps">Job Apps</Nav.Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/job-apps">Job Apps</Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Modal, Button, Form} from 'react-bootstrap'
-import User from '../components/User'
 import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
 
@@ -13,7 +12,6 @@ class LoginModal extends React.Component {
         first_name: "",
         last_name: "",
         email: "",
-        isSubmitted: false,
         showModal: true
       }
     }
@@ -71,7 +69,6 @@ class LoginModal extends React.Component {
                       Submit
                   </Button>
                 </Form>
-                {this.state.isSubmitted && <User/>}
               </Modal.Body>
               <Modal.Footer>
               </Modal.Footer>
