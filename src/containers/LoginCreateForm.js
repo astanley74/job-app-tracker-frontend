@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class LoginCreateForm extends React.Component {
 

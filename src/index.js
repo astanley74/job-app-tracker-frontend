@@ -7,6 +7,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import userReducer from './reducers/userReducer'
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -16,7 +18,11 @@ const store = createStore(userReducer, composeEnhancers(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+    	<Switch>
+      	  <Route exact path="/" component={ App } />
+      	</Switch>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
