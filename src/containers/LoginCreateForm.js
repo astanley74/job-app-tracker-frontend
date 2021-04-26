@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import User from '../components/User'
 import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
 
@@ -11,7 +12,8 @@ class LoginCreateForm extends React.Component {
         this.state = {
             first_name: "",
             last_name: "",
-            email: ""
+            email: "",
+            isSubmitted: false
         }
     }
 
@@ -30,6 +32,10 @@ class LoginCreateForm extends React.Component {
             last_name: "",
             email: ""
         })
+        this.setState({
+            ...this.state, 
+            isSubmitted: true})
+
     }
 
     render() {
@@ -55,6 +61,7 @@ class LoginCreateForm extends React.Component {
                     Submit
                 </Button>
               </Form>
+              {this.state.isSubmitted && <User/>}
             </div>
           );
     }
