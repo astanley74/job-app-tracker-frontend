@@ -1,12 +1,14 @@
 import './App.css';
-import LoginCreateForm from './containers/LoginCreateForm';
+import LoginModal from './containers/LoginModal'
+import User from './components/User'
 import NavBar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
     <NavBar/>
-      <LoginCreateForm/>
+      <LoginModal/>
+      <User/>
     </div>
   );
 }
