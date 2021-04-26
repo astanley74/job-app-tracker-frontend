@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { fetchUsers } from '../actions/fetchUsers'
+import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,6 +25,12 @@ class LoginCreateForm extends React.Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
+        this.props.addUser(this.state)
+        this.setState({
+            first_name: "",
+            last_name: "",
+            email: ""
+        })
     }
 
     render() {
@@ -56,4 +62,4 @@ class LoginCreateForm extends React.Component {
 
 }
 
-export default connect(null, { fetchUsers })(LoginCreateForm)
+export default connect(null, { addUser })(LoginCreateForm)
