@@ -1,4 +1,4 @@
-const userReducer = (state = {user: {}}, action) => {
+const userReducer = (state = {user: {job_applications: []}}, action) => {
     switch(action.type) {
         case "ADD_USER":
             return { user: action.payload}

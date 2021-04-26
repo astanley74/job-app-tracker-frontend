@@ -5,11 +5,12 @@ import JobAppCard from '../components/JobAppCard'
 
 class JobApplicationsContainer extends React.Component {
 
+
     generateJobAppCards = () => {
-        const { user } = this.props
-        return user.job_applications.map((job_application, index) => <JobAppCard
+        // console.log(this.props.user.job_applications)
+        return this.props.user.job_applications.map((job_application, index) => <JobAppCard
             key={index}
-            comapny={job_application.company}
+            company={job_application.company_name}
             date={job_application.date_of_application}
             position={job_application.position}
             application_status={job_application.application_status}
@@ -20,13 +21,13 @@ class JobApplicationsContainer extends React.Component {
 
     render() {
         return(
-            <div></div>
+            <div>{this.generateJobAppCards()}</div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    return {user: state.user}
-}
+// const mapStateToProps = (state) => {
+//     return {user: state.user}
+// }
 
-export default connect(mapStateToProps)(JobApplicationsContainer)
+export default JobApplicationsContainer

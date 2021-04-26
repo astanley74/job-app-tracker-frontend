@@ -4,21 +4,20 @@ import NavBar from './Navbar'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import JobApplicationsContainer from '../containers/JobApplicationsContainer'
 
-class User extends React.Component {
-    render() {
+const User = (props) => {
+
         return(
             <div>
                 <NavBar/>
                 <Jumbotron>
-                    <h1>{this.props.user.first_name} {this.props.user.last_name}</h1>
+                    <h1>{props.user.first_name} {props.user.last_name}</h1>
                         <p>
                             Welcome to your job application portal. All of your current job applications are listed below.
                         </p>
                 </Jumbotron>
-                <JobApplicationsContainer/>
+                <JobApplicationsContainer user={props.user}/>
             </div>
         )
-    }
 }
 
 const mapStateToProps = (state) => {
