@@ -1,5 +1,5 @@
-a {
-    color: rgba(255,255,255,.5);
+.mr-auto a {
+    color: white;
     padding-right: .5rem;
     padding-left: .5rem;
     display: block;
