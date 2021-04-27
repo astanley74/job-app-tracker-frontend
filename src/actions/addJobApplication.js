@@ -9,6 +9,6 @@ export const addJobApplication = (data) => {
             body: JSON.stringify(data)
         })
         .then(resp => resp.json())
-        .then(user => dispatch({type: "ADD_JOB_APPLICATION", payload: user}))
+        .then(job_app => dispatch({type: "ADD_JOB_APPLICATION", payload: job_app}))
     }
 }
