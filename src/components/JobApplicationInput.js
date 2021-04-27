@@ -1,5 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
+import {addJobApplication} from '../actions/addJobApplication'
 
 class JobApplicationInput extends React.Component {
     render() {
@@ -9,6 +11,8 @@ class JobApplicationInput extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {user: state.user}
+}
 
-
-export default JobApplicationInput
+export default connect(mapStateToProps, { addJobApplication })(JobApplicationInput)
