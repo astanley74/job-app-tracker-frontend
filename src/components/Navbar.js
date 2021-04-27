@@ -11,7 +11,7 @@ const NavBar = () => {
                 <Nav className="mr-auto">
                     <Link to="/home">Home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/job-apps">Job Apps</Link>
+                    <Link to="/add-job">Job Apps</Link>
                 </Nav>
             </Navbar>
         </div>

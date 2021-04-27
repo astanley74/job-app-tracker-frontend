@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './containers/Link.css'
 
+import JobApplicationInput from './components/JobApplicationInput';
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(userReducer, composeEnhancers( 
@@ -25,7 +27,8 @@ ReactDOM.render(
     	<Switch>
       	  <Route exact path="/" component= { App } />
           <Route path="/home" component= { User } />
-          <Route path="/home" component= { About } />
+          <Route path="/about" component= { About }/> 
+          <Route path="/add-job" component= { JobApplicationInput }/>
       	</Switch>
     </Router>
   </Provider>,
