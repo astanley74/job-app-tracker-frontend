@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Modal, Form, Button} from 'react-bootstrap';
-
+import User from './User'
 import {addJobApplication} from '../actions/addJobApplication'
 
 class JobApplicationInput extends React.Component {
@@ -13,7 +13,7 @@ class JobApplicationInput extends React.Component {
             date_of_application: "",
             position: "",
             application_status: true,
-            current_state: "",
+            current_stage: "",
             notes: "",
             user_id: 0,
             showModal: true,
@@ -38,7 +38,7 @@ class JobApplicationInput extends React.Component {
             date_of_application: "",
             position: "",
             application_status: true,
-            current_state: "",
+            current_stage: "",
             notes: "",
             user_id: 0
         })
@@ -49,6 +49,8 @@ class JobApplicationInput extends React.Component {
     }
 
 
+
+
     render() {
         return(
             <div>
@@ -57,15 +59,15 @@ class JobApplicationInput extends React.Component {
                 <Modal.Title id="contained-modal-title-vcenter">Add Job Application</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <Form >
+                <Form onSubmit={this.handleOnSubmit}>
                   <Form.Group controlId="formBasicCompany">
-                      <Form.Label>Email address</Form.Label>
+                      <Form.Label>Company</Form.Label>
                       <Form.Control type="name" name="company_name" placeholder="Company Name" value={this.state.company_name} onChange={this.handleOnChange}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicDateOfApplication">
                       <Form.Label>Date</Form.Label>
-                      <Form.Control type="name" name="date_of_application"placeholder="YYYY-MM-DD" value={this.state.date_of_application} onChange={this.handleOnChange}/>
+                      <Form.Control type="name" name="date_of_application"placeholder="MM-DD-YYYY" value={this.state.date_of_application} onChange={this.handleOnChange}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPosition">
@@ -73,9 +75,9 @@ class JobApplicationInput extends React.Component {
                       <Form.Control type="name" name="position" placeholder="Position" value={this.state.position} onChange={this.handleOnChange}/>
                   </Form.Group>
 
-                  <Form.Group controlId="formBasicCurrentState">
+                  <Form.Group controlId="formBasicCurrentStage">
                       <Form.Label></Form.Label>
-                      <Form.Control type="name" name="current_state" placeholder="Current State" value={this.state.current_state} onChange={this.handleOnChange}/>
+                      <Form.Control type="name" name="current_stage" placeholder="Current Stage" value={this.state.current_stage} onChange={this.handleOnChange}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicNotes">
@@ -91,6 +93,7 @@ class JobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
+            {this.state.isSubmitted && <User/>}
           </div>
         )
     }
