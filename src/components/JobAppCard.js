@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card} from 'react-bootstrap'
+import {Card, Button} from 'react-bootstrap'
 
 const JobAppCard = (props) => {
 
@@ -12,8 +12,11 @@ const JobAppCard = (props) => {
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
+                        <Button variant="danger">Delete</Button>
                     </Card.Body>
-                    <Card.Footer className="text-muted">{props.date}</Card.Footer>
+                    <Card.Footer className="text-muted">
+                        {props.date}
+                    </Card.Footer>
                 </Card>
             <br/>
             </div>
