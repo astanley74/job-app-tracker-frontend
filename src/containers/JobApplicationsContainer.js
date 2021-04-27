@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import JobAppCard from '../components/JobAppCard'
+import {CardDeck} from 'react-bootstrap'
 
 
 class JobApplicationsContainer extends React.Component {
@@ -21,7 +22,9 @@ class JobApplicationsContainer extends React.Component {
 
     render() {
         return(
-            <div>{this.generateJobAppCards()}</div>
+            <div>
+            <CardDeck>{this.generateJobAppCards()}</CardDeck>
+            </div>
         )
     }
 }
