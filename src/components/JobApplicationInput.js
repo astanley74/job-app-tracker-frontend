@@ -30,6 +30,23 @@ class JobApplicationInput extends React.Component {
         console.log(this.state)
     }
 
+    handleOnSubmit = event => {
+        event.preventDefault();
+        this.props.addJobApplication(this.state)
+        this.setState({
+            company_name: "",
+            date_of_application: "",
+            position: "",
+            application_status: true,
+            current_state: "",
+            notes: "",
+            user_id: 0
+        })
+        this.setState({
+            ...this.state, 
+            isSubmitted: true})
+
+    }
 
 
     render() {
