@@ -23,7 +23,9 @@ class JobApplicationsContainer extends React.Component {
     render() {
         return(
             <div>
-            <CardDeck>{this.generateJobAppCards()}</CardDeck>
+                <CardDeck>
+                    {this.generateJobAppCards()}
+                </CardDeck>
             </div>
         )
     }

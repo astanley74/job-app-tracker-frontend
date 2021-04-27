@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import User from './components/User'
+import User from './components/User';
+import About from './components/About';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -24,6 +25,7 @@ ReactDOM.render(
     	<Switch>
       	  <Route exact path="/" component= { App } />
           <Route path="/home" component= { User } />
+          <Route path="/home" component= { About } />
       	</Switch>
     </Router>
   </Provider>,
