@@ -1,6 +1,6 @@
-export const deleteJobApplication = (id) => {
+export const deleteJobApplication = (jobAppId, userId) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/job_applications/{id}`, {
+        fetch(`http://localhost:3000/api/v1/users/${userId}/job_applications/${jobAppId}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -8,7 +8,6 @@ export const deleteJobApplication = (id) => {
             method: 'DELETE',
         })
         .then(resp => resp.json())
-        // .then(id => dispatch({type: "DELETE_JOB_APPLICATION", payload: id}))
-        .then(data => console.log(data))
+        .then(user => dispatch({type: "DELETE_JOB_APPLICATION", payload: user}))
     }
 }

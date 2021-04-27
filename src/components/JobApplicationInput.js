@@ -39,8 +39,7 @@ class JobApplicationInput extends React.Component {
             position: "",
             application_status: true,
             current_stage: "",
-            notes: "",
-            user_id: 0
+            notes: ""
         })
         this.setState({
             ...this.state, 

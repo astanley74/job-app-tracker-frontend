@@ -6,6 +6,9 @@ const userReducer = (state = {user: {job_applications: []}}, action) => {
             return {...state,
                 user: {...state.user, job_applications: [...state.user.job_applications, action.payload]}  
             }
+        case "DELETE_JOB_APPLICATION":
+            return { user: action.payload }
+            
         default: 
             return state
     }
