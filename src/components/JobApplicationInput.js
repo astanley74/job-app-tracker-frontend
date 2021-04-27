@@ -48,7 +48,9 @@ class JobApplicationInput extends React.Component {
 
     }
 
-
+    close = () => {
+        this.setState({showModal: false})
+    }
 
 
     render() {
