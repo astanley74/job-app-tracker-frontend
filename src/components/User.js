@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import NavBar from './Navbar'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import JobApplicationsContainer from '../containers/JobApplicationsContainer'
+import Footer from './Footer'
 
 const User = (props) => {
 
@@ -16,6 +17,7 @@ const User = (props) => {
                         </p>
                 </Jumbotron>
                 <JobApplicationsContainer user={props.user}/>
+                <Footer/>
             </div>
         )
 }
