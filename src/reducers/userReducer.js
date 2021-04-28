@@ -8,7 +8,8 @@ const userReducer = (state = {user: {job_applications: []}}, action) => {
             }
         case "DELETE_JOB_APPLICATION":
             return { user: action.payload }
-            
+        case "EDIT_JOB_APPLICATION":
+            return state
         default: 
             return state
     }
