@@ -1,4 +1,5 @@
 import React from 'react';
+import User from './User';
 import { Form, Modal, Button} from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
@@ -43,7 +44,6 @@ class EditJobApplicationInput extends React.Component {
             ...this.state, 
             isSubmitted: true
         })
-        this.props.history.push('/home')
 
     }
 
@@ -54,9 +54,11 @@ class EditJobApplicationInput extends React.Component {
 
     render() {
         return(
+            
             <div>
-            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-              <Modal.Header>
+            {console.log(this.props)}{console.log(this.state)}
+            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered onHide={this.close}>
+              <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">Job Application for {this.state.company_name}</Modal.Title>
               </Modal.Header>
               <Modal.Body>
@@ -94,6 +96,7 @@ class EditJobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
+            {this.state.isSubmitted && <User/>}
           </div>
         )
     }

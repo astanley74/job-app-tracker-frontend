@@ -17,7 +17,7 @@ class JobAppCard extends React.Component {
 
     handleOnClick = event => {
         this.setState({
-            editJob: true
+            editJob: !this.state.editJob
         })
     }
 
@@ -36,7 +36,7 @@ class JobAppCard extends React.Component {
                 <Button variant="danger" onClick={this.handleOnClick}>Edit</Button> <Button variant="danger" onClick={() => this.props.deleteJobApplication(job_app.id, job_app.user_id)}>Delete</Button>
             </Card.Body>
             <Card.Footer className="text-muted">
-                {job_app.date}
+                {job_app.date_of_application}
             </Card.Footer>
         </Card>
     <br/> 
