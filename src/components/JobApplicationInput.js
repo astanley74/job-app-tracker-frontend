@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Modal, Form, Button} from 'react-bootstrap';
-import User from './User'
+import { withRouter } from 'react-router-dom';
 import {addJobApplication} from '../actions/addJobApplication'
 
 class JobApplicationInput extends React.Component {
@@ -41,9 +41,7 @@ class JobApplicationInput extends React.Component {
             current_stage: "",
             notes: ""
         })
-        this.setState({
-            ...this.state, 
-            isSubmitted: true})
+        this.props.history.push('/home')
 
     }
 
@@ -94,7 +92,6 @@ class JobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
-            {this.state.isSubmitted && <User/>}
           </div>
         )
     }
@@ -104,4 +101,4 @@ const mapStateToProps = (state) => {
     return {user: state.user}
 }
 
-export default connect(mapStateToProps, { addJobApplication })(JobApplicationInput)
+export default withRouter(connect(mapStateToProps, { addJobApplication })(JobApplicationInput))

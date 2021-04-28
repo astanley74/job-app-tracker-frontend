@@ -1,9 +1,7 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap'
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import EditJobApplicationInput from './EditJobApplicationInput';
-import User from './User'
 import { deleteJobApplication } from '../actions/deleteJobApplication'
 
 class JobAppCard extends React.Component {
