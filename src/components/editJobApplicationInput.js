@@ -42,7 +42,9 @@ class EditJobApplicationInput extends React.Component {
         })
         this.setState({
             ...this.state, 
-            isSubmitted: true})
+            isSubmitted: true
+        })
+        this.props.history.push('/home')
 
     }
 
@@ -93,7 +95,6 @@ class EditJobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
-            {/* {this.state.isSubmitted && <User/>} */}
           </div>
         )
     }
