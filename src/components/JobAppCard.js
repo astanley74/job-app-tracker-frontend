@@ -40,7 +40,7 @@ class JobAppCard extends React.Component {
             </Card.Footer>
         </Card>
     <br/> 
-    {this.state.editJob && <EditJobApplicationInput/>}
+    {this.state.editJob && <EditJobApplicationInput job_app={job_app}/>}
     </div>
     )}
 
