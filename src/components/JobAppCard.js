@@ -29,7 +29,7 @@ class JobAppCard extends React.Component {
             <Card.Body>
                 <Card.Title>{job_app.company_name}</Card.Title>
                 <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    Current Stage: {job_app.current_stage}
                 </Card.Text>
                 <Button variant="danger" onClick={this.handleOnClick}>Edit</Button> <Button variant="danger" onClick={() => this.props.deleteJobApplication(job_app.id, job_app.user_id)}>Delete</Button>
             </Card.Body>

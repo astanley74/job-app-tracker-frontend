@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import JobAppCard from '../components/JobAppCard'
 import {CardDeck} from 'react-bootstrap'
 

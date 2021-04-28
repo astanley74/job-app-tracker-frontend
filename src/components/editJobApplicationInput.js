@@ -1,5 +1,4 @@
 import React from 'react';
-import User from './User';
 import { Form, Modal, Button} from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
@@ -31,7 +30,7 @@ class EditJobApplicationInput extends React.Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.editJobApplication(this.props.job_app.id, this.state.user_id)
+        this.props.editJobApplication(this.props.job_app.id, this.state)
         this.setState({
             company_name: "",
             date_of_application: "",
@@ -44,7 +43,7 @@ class EditJobApplicationInput extends React.Component {
             ...this.state, 
             isSubmitted: true
         })
-
+        this.props.history.push('/home')
     }
 
     close = () => {
@@ -96,7 +95,6 @@ class EditJobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
-            {this.state.isSubmitted && <User/>}
           </div>
         )
     }
