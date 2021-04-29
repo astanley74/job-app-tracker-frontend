@@ -44,7 +44,9 @@ class JobApplicationInput extends React.Component {
         })
         this.setState({
             ...this.state, 
-            isSubmitted: true})
+            isSubmitted: true
+        })
+        this.props.history.push('/home')
 
     }
 
@@ -95,7 +97,6 @@ class JobApplicationInput extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
-            {this.state.isSubmitted && this.props.history.push('/home')}
           </div>
         )
     }

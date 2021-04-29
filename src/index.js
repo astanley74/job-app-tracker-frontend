@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import User from './components/User';
 import About from './components/About';
+import LoginModal from './containers/LoginModal'
 import EditJobApplicationInput from './components/EditJobApplicationInput'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -27,6 +28,7 @@ ReactDOM.render(
     <Router>
     	<Switch>
       	  <Route exact path="/" component= { App } />
+          <Route path="/login" component= {LoginModal }/>
           <Route path="/home" component= { User } />
           <Route path="/about" component= { About }/> 
           <Route path="/add-job" component= { JobApplicationInput }/>

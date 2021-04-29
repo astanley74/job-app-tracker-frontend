@@ -1,9 +1,9 @@
 import './App.css';
-import LoginModal from './containers/LoginModal'
+import Home from './containers/Home'
 function App() {
   return (
     <div className="App">
-      <LoginModal/>
+      <Home/>
     </div>
   );
 }
