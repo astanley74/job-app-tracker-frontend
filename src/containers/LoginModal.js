@@ -44,13 +44,14 @@ class LoginModal extends React.Component {
 
     close = () => {
         this.setState({showModal: false})
+        this.props.history.push('/')
     }
 
     render() {
         return (
           <div>
-            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-              <Modal.Header>
+            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered onHide={this.close}>
+              <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">Login Or Sign Up!</Modal.Title>
               </Modal.Header>
               <Modal.Body>
