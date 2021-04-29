@@ -11,16 +11,21 @@ const About = (props) => {
     return(
         <div>
         <NavBar/>
-        <Card className="text-center">
-            <Card.Header>About</Card.Header>
+        <Card>
+            <Card.Header className="text-center">About</Card.Header>
             <Card.Body>
-                <Card.Title>What Is Job Tracker?</Card.Title>
+                <Card.Title className="text-center">What Is Job Tracker?</Card.Title>
+                <Card.Subtitle>
+                    Job Tracker is an app that allows you to add job applications to your profile in order to keep track
+                    of all of your current job applications. It allows you to update your job apps to monitor your progress with your
+                    prospective companies. 
+                </Card.Subtitle>
                 <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+
                 </Card.Text>
                 <Button variant="primary" onClick={() => handleOnClick()}>User Home</Button>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer className="text-center">
                 <Card.Link href="#https://github.com/astanley74">Github: https://github.com/astanley74</Card.Link>
             </Card.Footer>
         </Card>

@@ -11,13 +11,13 @@ const Header = (props) => {
 
     return (
         <Jumbotron>
-        <h1>Hello, world!</h1>
+        <h1>Welcome To Job Tracker!</h1>
         <p>
-            This is a simple hero unit, a simple jumbotron-style component for calling
-            extra attention to featured content or information.
+            An application that allows you to track the progress of all of your current job applications.
         </p>
+        <p>Please Log In or Sign Up Below</p>
         <p>
-            <Button onClick={() => handleOnClick()}variant="primary">Learn more</Button>
+            <Button onClick={() => handleOnClick()}variant="primary">Log In/Sign Up</Button>
         </p>
     </Jumbotron>
     )
