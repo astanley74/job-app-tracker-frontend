@@ -12,7 +12,7 @@ const About = (props) => {
         <div>
         <NavBar/>
             <Card className="text-center">
-  <Card.Header>Featured</Card.Header>
+  <Card.Header>What is Job Tracker?</Card.Header>
   <Card.Body>
     <Card.Title>About</Card.Title>
     <Card.Text>
@@ -20,7 +20,9 @@ const About = (props) => {
     </Card.Text>
     <Button variant="primary" onClick={() => handleOnClick()}>User Home</Button>
   </Card.Body>
-  <Card.Footer className="text-muted">2 days ago</Card.Footer>
+  <Card.Footer>
+  <Card.Link href="#https://github.com/astanley74">Github: https://github.com/astanley74</Card.Link>
+  </Card.Footer>
 </Card>
         </div>
     )
