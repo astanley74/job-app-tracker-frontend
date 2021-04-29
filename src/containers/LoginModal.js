@@ -58,12 +58,12 @@ class LoginModal extends React.Component {
                   </Form.Group>
 
                   <Form.Group controlId="formBasicFirstName">
-                      <Form.Label>Name</Form.Label>
+                      <Form.Label>First Name</Form.Label>
                       <Form.Control type="name" name="first_name"placeholder="First Name" value={this.state.first_name} onChange={this.handleOnChange}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicLastName">
-                      <Form.Label></Form.Label>
+                      <Form.Label>Last Name</Form.Label>
                       <Form.Control type="name" name="last_name" placeholder="Last Name" value={this.state.last_name} onChange={this.handleOnChange}/>
                   </Form.Group>
 
