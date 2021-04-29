@@ -2,7 +2,7 @@ import React from 'react';
 import {Modal, Button, Form} from 'react-bootstrap'
 import { addUser } from '../actions/addUser'
 import { connect } from 'react-redux';
-import User from '../components/User'
+import { withRouter } from 'react-router-dom';
 
 
 class LoginModal extends React.Component {
@@ -35,7 +35,10 @@ class LoginModal extends React.Component {
         })
         this.setState({
             ...this.state, 
-            isSubmitted: true})
+            isSubmitted: true,
+            showModal: false
+        })
+        this.props.history.push('/home')
 
     }
 
@@ -67,7 +70,7 @@ class LoginModal extends React.Component {
                       <Form.Control type="name" name="last_name" placeholder="Last Name" value={this.state.last_name} onChange={this.handleOnChange}/>
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" onClick={this.close}>
+                  <Button variant="primary" type="submit">
                       Submit
                   </Button>
                 </Form>
@@ -75,10 +78,9 @@ class LoginModal extends React.Component {
               <Modal.Footer>
               </Modal.Footer>
             </Modal>
-            {this.state.isSubmitted && <User/>}
           </div>
         );
       }
 }
 
-export default connect(null, { addUser })(LoginModal)
+export default withRouter(connect(null, { addUser })(LoginModal))
