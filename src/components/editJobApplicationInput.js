@@ -55,7 +55,7 @@ class EditJobApplicationInput extends React.Component {
         return(
             
             <div>
-            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered onHide={this.close}>
+            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" onHide={this.close}>
               <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">Job Application for {this.state.company_name}</Modal.Title>
               </Modal.Header>

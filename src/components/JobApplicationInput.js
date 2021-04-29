@@ -44,7 +44,8 @@ class JobApplicationInput extends React.Component {
         })
         this.setState({
             ...this.state, 
-            isSubmitted: true
+            isSubmitted: true,
+            showModal: false
         })
         this.props.history.push('/home')
 
@@ -52,14 +53,15 @@ class JobApplicationInput extends React.Component {
 
     close = () => {
         this.setState({showModal: false})
+        this.props.history.push('/home')
     }
 
 
     render() {
         return(
             <div>
-            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-              <Modal.Header>
+            <Modal show={this.state.showModal} size="lg" aria-labelledby="contained-modal-title-vcenter" centered onHide={this.close}>
+              <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">Add Job Application</Modal.Title>
               </Modal.Header>
               <Modal.Body>
@@ -89,7 +91,7 @@ class JobApplicationInput extends React.Component {
                       <Form.Control type="name" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleOnChange}/>
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" onClick={this.close}>
+                  <Button variant="primary" type="submit" >
                       Submit
                   </Button>
                 </Form>

@@ -11,19 +11,19 @@ const About = (props) => {
     return(
         <div>
         <NavBar/>
-            <Card className="text-center">
-  <Card.Header>What is Job Tracker?</Card.Header>
-  <Card.Body>
-    <Card.Title>About</Card.Title>
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
-    </Card.Text>
-    <Button variant="primary" onClick={() => handleOnClick()}>User Home</Button>
-  </Card.Body>
-  <Card.Footer>
-  <Card.Link href="#https://github.com/astanley74">Github: https://github.com/astanley74</Card.Link>
-  </Card.Footer>
-</Card>
+        <Card className="text-center">
+            <Card.Header>About</Card.Header>
+            <Card.Body>
+                <Card.Title>What Is Job Tracker?</Card.Title>
+                <Card.Text>
+                    With supporting text below as a natural lead-in to additional content.
+                </Card.Text>
+                <Button variant="primary" onClick={() => handleOnClick()}>User Home</Button>
+            </Card.Body>
+            <Card.Footer>
+                <Card.Link href="#https://github.com/astanley74">Github: https://github.com/astanley74</Card.Link>
+            </Card.Footer>
+        </Card>
         </div>
     )
 }

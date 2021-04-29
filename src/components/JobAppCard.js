@@ -25,11 +25,11 @@ class JobAppCard extends React.Component {
         return(
         <div>
         <Card className="text-left" bg="dark" text="light">
-            <Card.Header className="text-center">{job_app.position}</Card.Header>
+            <Card.Header className="text-center">{job_app.position} - {job_app.company_name}</Card.Header>
             <Card.Body>
-                <Card.Title>{job_app.company_name}</Card.Title>
+                {/* <Card.Title>{job_app.company_name}</Card.Title> */}
                 <Card.Subtitle>
-                    Current Stage: {job_app.current_stage}
+                    Stage: {job_app.current_stage}
                 </Card.Subtitle>
             <Card.Body>
             <Card.Text>
