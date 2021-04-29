@@ -1,8 +1,13 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap'
+import {withRouter} from 'react-router-dom'
 import NavBar from './Navbar'
 
-const About = () => {
+const About = (props) => {
+
+    const handleOnClick = event => {
+        props.history.push('/home')
+    }
     return(
         <div>
         <NavBar/>
@@ -13,7 +18,7 @@ const About = () => {
     <Card.Text>
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button variant="primary" onClick={() => handleOnClick()}>User Home</Button>
   </Card.Body>
   <Card.Footer className="text-muted">2 days ago</Card.Footer>
 </Card>
@@ -21,4 +26,4 @@ const About = () => {
     )
 }
 
-export default About
+export default withRouter(About)

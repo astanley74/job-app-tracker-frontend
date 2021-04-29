@@ -28,10 +28,15 @@ class JobAppCard extends React.Component {
             <Card.Header className="text-center">{job_app.position}</Card.Header>
             <Card.Body>
                 <Card.Title>{job_app.company_name}</Card.Title>
-                <Card.Text>
+                <Card.Subtitle>
                     Current Stage: {job_app.current_stage}
+                </Card.Subtitle>
+            <Card.Body>
+            <Card.Text>
+                    Notes: {job_app.notes}
                 </Card.Text>
-                <Button variant="danger" onClick={this.handleOnClick}>Edit</Button> <Button variant="danger" onClick={() => this.props.deleteJobApplication(job_app.id, job_app.user_id)}>Delete</Button>
+            </Card.Body>
+                <Button variant="primary" onClick={this.handleOnClick}>Update</Button> <Button variant="danger" onClick={() => this.props.deleteJobApplication(job_app.id, job_app.user_id)}>Delete</Button>
             </Card.Body>
             <Card.Footer className="text-muted">
                 {job_app.date_of_application}
