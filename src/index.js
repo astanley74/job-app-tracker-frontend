@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import User from './components/User';
 import About from './components/About';
-import LoginModal from './containers/LoginModal'
+import LoginModal from './components/LoginModal'
 import EditJobApplicationInput from './components/EditJobApplicationInput'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';

@@ -7,7 +7,7 @@ class JobApplicationsContainer extends React.Component {
 
 
     generateJobAppCards = () => {
-        return this.props.user.job_applications.map((job_application, index) => <JobAppCard key={index} job_app={job_application}/>)
+        return this.props.user.job_applications.map(job_application => <JobAppCard key={job_application.id} job_app={job_application}/>)
     }
 
     render() {
