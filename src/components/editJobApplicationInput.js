@@ -37,9 +37,7 @@ class EditJobApplicationInput extends React.Component {
             position: "",
             application_status: true,
             current_stage: "",
-            notes: ""
-        })
-        this.setState({
+            notes: "",
             ...this.state, 
             isSubmitted: true
         })

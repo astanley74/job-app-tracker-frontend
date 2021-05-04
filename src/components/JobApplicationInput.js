@@ -40,10 +40,7 @@ class JobApplicationInput extends React.Component {
             application_status: true,
             current_stage: "",
             notes: "",
-            user_id: 0
-        })
-        this.setState({
-            ...this.state, 
+            user_id: 0,
             isSubmitted: true,
             showModal: false
         })

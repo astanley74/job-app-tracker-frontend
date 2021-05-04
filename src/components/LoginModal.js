@@ -31,10 +31,7 @@ class LoginModal extends React.Component {
         this.setState({
             first_name: "",
             last_name: "",
-            email: ""
-        })
-        this.setState({
-            ...this.state, 
+            email: "",
             isSubmitted: true,
             showModal: false
         })
