@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/job-app-tracker-frontend/static/css/main.c62f6347.chunk.css",
+    "main.js": "/job-app-tracker-frontend/static/js/main.c01c4b71.chunk.js",
+    "main.js.map": "/job-app-tracker-frontend/static/js/main.c01c4b71.chunk.js.map",
+    "runtime-main.js": "/job-app-tracker-frontend/static/js/runtime-main.dc16edce.js",
+    "runtime-main.js.map": "/job-app-tracker-frontend/static/js/runtime-main.dc16edce.js.map",
+    "static/css/2.150d169a.chunk.css": "/job-app-tracker-frontend/static/css/2.150d169a.chunk.css",
+    "static/js/2.dc577db1.chunk.js": "/job-app-tracker-frontend/static/js/2.dc577db1.chunk.js",
+    "static/js/2.dc577db1.chunk.js.map": "/job-app-tracker-frontend/static/js/2.dc577db1.chunk.js.map",
+    "static/js/3.40cafbbb.chunk.js": "/job-app-tracker-frontend/static/js/3.40cafbbb.chunk.js",
+    "static/js/3.40cafbbb.chunk.js.map": "/job-app-tracker-frontend/static/js/3.40cafbbb.chunk.js.map",
+    "index.html": "/job-app-tracker-frontend/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/job-app-tracker-frontend/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.c62f6347.chunk.css.map": "/job-app-tracker-frontend/static/css/main.c62f6347.chunk.css.map",
+    "static/js/2.dc577db1.chunk.js.LICENSE.txt": "/job-app-tracker-frontend/static/js/2.dc577db1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc16edce.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.dc577db1.chunk.js",
+    "static/css/main.c62f6347.chunk.css",
+    "static/js/main.c01c4b71.chunk.js"
+  ]
+}
