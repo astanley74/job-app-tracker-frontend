@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -25,14 +25,14 @@ const store = createStore(userReducer, composeEnhancers(
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       	  <Route exact path="/" component= { App } />
           <Route path="/login" component= {LoginModal }/>
           <Route path="/home" component= { User } />
           <Route path="/about" component= { About }/> 
           <Route path="/add-job" component= { JobApplicationInput }/>
           <Route path="/edit-job" component= { EditJobApplicationInput }/>
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
