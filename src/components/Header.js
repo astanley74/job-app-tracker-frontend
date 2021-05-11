@@ -17,7 +17,7 @@ const Header = (props) => {
         </p>
         <p>Please Log In or Sign Up Below</p>
         <p>
-            <Button onClick={() => handleOnClick()}variant="primary">Log In/Sign Up</Button>
+            <Button onClick={handleOnClick}variant="primary">Log In/Sign Up</Button>
         </p>
     </Jumbotron>
     )

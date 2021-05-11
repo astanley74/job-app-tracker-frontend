@@ -9,9 +9,26 @@ class JobAppCard extends React.Component {
     constructor() {
         super()
         this.state = {
-            editJob: false
+            editJob: false,
+            favorite: false,
+            addHeart: ""
         }
     }
+    
+    // handleFavorite = event => {
+    //     this.setState({
+    //         favorite: !this.state.favorite
+    //     })
+    //     if (this.state.favorite === true) {
+    //         this.setState({
+    //             addHeart: "<3"
+    //         })
+    //     } else {
+    //         this.setState({
+    //             addHeart: ""
+    //         })
+    //     }
+    // }
 
     handleOnClick = event => {
         this.setState({
@@ -34,9 +51,12 @@ class JobAppCard extends React.Component {
             <Card.Body>
             <Card.Text>
                     Notes: {job_app.notes}
+                    <br></br>
+                    {/* Favorite: {this.state.addHeart} */}
                 </Card.Text>
             </Card.Body>
                 <Button variant="primary" onClick={this.handleOnClick}>Update</Button> <Button variant="danger" onClick={() => this.props.deleteJobApplication(job_app.id, job_app.user_id)}>Delete</Button>
+                {/* <Button variant="primary" onClick={this.handleFavorite}>Favorite</Button> */}
             </Card.Body>
             <Card.Footer className="text-muted">
                 {job_app.date_of_application}
