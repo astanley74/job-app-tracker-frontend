@@ -1,7 +1,7 @@
 export const addJobApplication = (data) => {
     const userId = data.user_id
     return (dispatch) => {
-        fetch(`https://morning-ridge-63294.herokuapp.com/api/v1/users/${userId}/job_applications`, {
+        fetch(`https://stormy-refuge-75117.herokuapp.com/api/v1/users/${userId}/job_applications`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
