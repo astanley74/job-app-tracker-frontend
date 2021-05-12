@@ -1,6 +1,6 @@
 export const editJobApplication = (jobAppId, data) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${data.user_id}/job_applications/${jobAppId}`, {
+        fetch(`https://morning-ridge-63294.herokuapp.com/api/v1/users/${data.user_id}/job_applications/${jobAppId}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

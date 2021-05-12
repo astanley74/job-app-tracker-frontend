@@ -1,6 +1,6 @@
 export const addUser = (data) => {
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/users', {
+        fetch('https://morning-ridge-63294.herokuapp.com/api/v1/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

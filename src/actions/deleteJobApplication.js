@@ -1,6 +1,6 @@
 export const deleteJobApplication = (jobAppId, userId) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${userId}/job_applications/${jobAppId}`, {
+        fetch(`https://morning-ridge-63294.herokuapp.com/users/${userId}/job_applications/${jobAppId}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
