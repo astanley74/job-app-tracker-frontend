@@ -10,12 +10,9 @@ This applicationw as built with a React/Redux/JavaScript frontend and a Ruby on 
 - Update current job applications
 - Delete current job applications
 
-## Installation
+## How to Use
 
-    $ git clone git@github.com:astanley74/job-app-tracker-frontend.git
-    $ cd job-app-tracker-frontend
-    $ npm install
-    $ npm start
+Application has been deployed via github pages. To use, navigate to [this url](https://astanley74.github.io/job-app-tracker-frontend/)
 
 ## Demo
 [Application Walkthrough](https://www.youtube.com/watch?v=bCZSAoKtvPM&t=5s)
