@@ -3,6 +3,7 @@ import {Card, Button} from 'react-bootstrap'
 import { connect } from 'react-redux';
 import EditJobApplicationInput from './EditJobApplicationInput';
 import { deleteJobApplication } from '../actions/deleteJobApplication'
+import JobAppView from './JobAppView'
 
 class JobAppCard extends React.Component {
 
@@ -64,6 +65,7 @@ class JobAppCard extends React.Component {
         </Card>
     <br/> 
     {this.state.editJob && <EditJobApplicationInput job_app={job_app}/>}
+    {this.state.showJob && <JobAppView job_app={job_app}/>}
     </div>
     )}
 

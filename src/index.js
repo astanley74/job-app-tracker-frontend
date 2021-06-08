@@ -16,6 +16,7 @@ import User from './components/User';
 import About from './components/About';
 import LoginModal from './components/LoginModal'
 import EditJobApplicationInput from './components/EditJobApplicationInput'
+import JobAppView from './components/JobAppView';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -30,6 +31,7 @@ ReactDOM.render(
           <Route path="/login" component= {LoginModal }/>
           <Route path="/home" component= { User } />
           <Route path="/about" component= { About }/> 
+          <Route exact path='/job-app/:id' render={(routerProps) => <JobAppView {...routerProps} />} />
           <Route path="/add-job" component= { JobApplicationInput }/>
           <Route path="/edit-job" component= { EditJobApplicationInput }/>
     </BrowserRouter>
