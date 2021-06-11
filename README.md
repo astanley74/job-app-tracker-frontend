@@ -1,6 +1,6 @@
 ## Job Tracker
 
-This applicationw as built with a React/Redux/JavaScript frontend and a Ruby on Rails backend API. Job Tracker allows users to create, update and delete job applications in order to monitor their progress with prospective employers.
+This application was built with a React/Redux/JavaScript frontend and a Ruby on Rails backend API. Job Tracker allows users to create, update and delete job applications in order to monitor their progress with prospective employers.
 
 ## What you can do
 
