@@ -1,5 +1,6 @@
 import React from 'react';
 import JobAppCard from '../components/JobAppCard'
+import {connect} from 'react-redux'
 import {CardDeck} from 'react-bootstrap'
 
 
@@ -21,8 +22,8 @@ class JobApplicationsContainer extends React.Component {
     }
 }
 
-// const mapStateToProps = (state) => {
-//     return {user: state.user}
-// }
+const mapStateToProps = (state) => {
+    return {user: state.user}
+}
 
-export default JobApplicationsContainer
+export default connect(mapStateToProps)(JobApplicationsContainer)

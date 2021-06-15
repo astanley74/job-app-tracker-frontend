@@ -6,17 +6,17 @@ import JobApplicationsContainer from '../containers/JobApplicationsContainer'
 import Footer from './Footer'
 
 const User = (props) => {
-
+    const { user } = props;
         return(
             <div>
                 <NavBar/>
                 <Jumbotron>
-                    <h1>{props.user.first_name} {props.user.last_name}</h1>
+                    <h1>{user.first_name} {user.last_name}</h1>
                         <p>
                             Welcome to your job application portal. All of your current job applications are listed below.
                         </p>
                 </Jumbotron>
-                <JobApplicationsContainer user={props.user}/>
+                <JobApplicationsContainer />
                 <Footer/>
             </div>
         )
