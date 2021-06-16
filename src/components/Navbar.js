@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <div>
             <Navbar bg="primary" variant="dark">
-                <Navbar.Brand href="/">JobTracker</Navbar.Brand>
+                <Navbar.Brand href="/logout">JobTracker</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Link to="/home">Home</Link>
                     <Link to="/about">About</Link>

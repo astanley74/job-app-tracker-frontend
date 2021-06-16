@@ -18,7 +18,7 @@ import App from './App';
 import User from './components/User';
 import About from './components/About';
 import LoginModal from './components/LoginModal'
-import EditJobApplicationInput from './components/EditJobApplicationInput'
+import Logout from './components/Logout';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -45,8 +45,8 @@ ReactDOM.render(
           <Route path="/login" component= {LoginModal }/>
           <Route path="/home" component= { User } />
           <Route path="/about" component= { About }/> 
+          <Route path='/logout' component= { Logout }/>
           <Route path="/add-job" component= { JobApplicationInput }/>
-          <Route path="/edit-job" component= { EditJobApplicationInput }/>
     </BrowserRouter>
     </PersistGate>
   </Provider>,

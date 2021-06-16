@@ -10,6 +10,8 @@ const userReducer = (state = {user: {job_applications: []}}, action) => {
             return { user: action.payload }
         case "EDIT_JOB_APPLICATION":
             return { user: action.payload }
+        case "LOGOUT_USER":
+            return { user: {job_applications: []}}
         default: 
             return state
     }
