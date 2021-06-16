@@ -4,6 +4,7 @@ import NavBar from './Navbar'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import JobApplicationsContainer from '../containers/JobApplicationsContainer'
 import Footer from './Footer'
+// ensure new branch is working
 
 const User = (props) => {
     const { user } = props;
