@@ -5,6 +5,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { PersistGate } from 'redux-persist/integration/react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -19,12 +22,24 @@ import EditJobApplicationInput from './components/EditJobApplicationInput'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const store = createStore(userReducer, composeEnhancers(
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, userReducer)
+
+
+
+const store = createStore(persistedReducer, composeEnhancers(
 	applyMiddleware(thunk) 
 	))
 
+  let persistor = persistStore(store)
+
 ReactDOM.render(
   <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       	  <Route exact path="/" component= { App } />
           <Route path="/login" component= {LoginModal }/>
@@ -33,6 +48,7 @@ ReactDOM.render(
           <Route path="/add-job" component= { JobApplicationInput }/>
           <Route path="/edit-job" component= { EditJobApplicationInput }/>
     </BrowserRouter>
+    </PersistGate>
   </Provider>,
   document.getElementById('root')
 );
