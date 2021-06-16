@@ -12,6 +12,7 @@ class LoginModal extends React.Component {
       this.state = {
         first_name: "",
         last_name: "",
+        password: "", 
         email: "",
         showModal: true,
         isSubmitted: false
@@ -22,7 +23,7 @@ class LoginModal extends React.Component {
       this.setState({
           [event.target.name]: event.target.value
         })
-      console.log(this.state)
+      // console.log(this.state)
     }
 
     handleOnSubmit = event => {
@@ -56,6 +57,11 @@ class LoginModal extends React.Component {
                   <Form.Group controlId="formBasicEmail">
                       <Form.Label>Email address</Form.Label>
                       <Form.Control type="email" name="email" placeholder="Enter email" value={this.state.email} onChange={this.handleOnChange}/>
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" name="password" placeholder="Enter password" value={this.state.password} onChange={this.handleOnChange}/>
                   </Form.Group>
 
                   <Form.Group controlId="formBasicFirstName">
