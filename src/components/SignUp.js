@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 
-class LoginModal extends React.Component {
+class SignUp extends React.Component {
 
     constructor() {
       super()
@@ -87,4 +87,4 @@ class LoginModal extends React.Component {
       }
 }
 
-export default withRouter(connect(null, { addUser })(LoginModal))
+export default withRouter(connect(null, { addUser })(SignUp))

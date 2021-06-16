@@ -5,8 +5,8 @@ import React from 'react';
 
 const Header = (props) => {
 
-    const handleOnClick = event => {
-        props.history.push('/login')
+    const handleSignUp = event => {
+        props.history.push('/sign-up')
     }
 
     return (
@@ -17,7 +17,7 @@ const Header = (props) => {
         </p>
         <p>Please Log In or Sign Up Below</p>
         <p>
-            <Button onClick={handleOnClick}variant="primary">Log In/Sign Up</Button>
+            <Button onClick={handleSignUp}variant="primary">Sign Up</Button>    
         </p>
     </Jumbotron>
     )
