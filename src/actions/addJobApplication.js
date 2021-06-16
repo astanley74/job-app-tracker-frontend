@@ -1,8 +1,7 @@
 export const addJobApplication = (data) => {
     const userId = data.user_id
     return (dispatch) => {
-        // fetch(`https://stormy-refuge-75117.herokuapp.com/api/v1/users/${userId}/job_applications`
-        fetch(`http://localhost:3000/api/v1/users/${userId}/job_applications`, {
+        fetch(`https://thawing-ocean-45459.herokuapp.com/api/v1/users/${userId}/job_applications`, {
             headers: {
                 'Content-Type': 'application/json',
                 "Authorization": `Bearer ${localStorage.getItem("jwt")}`,
