@@ -9,6 +9,10 @@ const Header = (props) => {
         props.history.push('/sign-up')
     }
 
+    const handleLogIn = event => {
+        props.history.push('/login')
+    }
+
     return (
         <Jumbotron>
         <h1>Welcome To Job Tracker!</h1>
@@ -17,7 +21,7 @@ const Header = (props) => {
         </p>
         <p>Please Log In or Sign Up Below</p>
         <p>
-            <Button onClick={handleSignUp}variant="primary">Sign Up</Button>    
+            <Button onClick={handleSignUp}variant="primary">Sign Up</Button>   <Button onClick={handleLogIn}variant="primary">Log In</Button>
         </p>
     </Jumbotron>
     )
