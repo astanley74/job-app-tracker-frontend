@@ -1,15 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-class JobAppView extends React.Component {
-
-
-    render() {
-        
+const JobAppView = (props) => {
+    let job_app = props.job_apps.filter(job => job.id === parseInt(props.match.params.jobId))[0]
+    console.log(job_app)
         return(
-            <div></div>
+            <div>{job_app.company_name}</div>
         )
-    }
 }
 
 const mapStateToProps = (state) => {
