@@ -20,6 +20,7 @@ import About from './components/About';
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
 import Logout from './components/Logout';
+import JobAppView from './components/JobAppView';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -49,6 +50,7 @@ ReactDOM.render(
           <Route path="/login" component= { LogIn }/>
           <Route path='/logout' component= { Logout }/>
           <Route path="/add-job" component= { JobApplicationInput }/>
+          <Route path="/job-app/:jobId" render={routerProps => <JobAppView {...routerProps}/>}/>
     </BrowserRouter>
     </PersistGate>
   </Provider>,
