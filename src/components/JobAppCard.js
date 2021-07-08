@@ -3,6 +3,7 @@ import {Card, Button} from 'react-bootstrap'
 import { connect } from 'react-redux';
 import EditJobApplicationInput from './EditJobApplicationInput';
 import { deleteJobApplication } from '../actions/deleteJobApplication'
+import { Link } from 'react-router-dom';
 
 class JobAppCard extends React.Component {
 
@@ -42,7 +43,9 @@ class JobAppCard extends React.Component {
         return(
         <div>
         <Card className="text-left" bg="dark" text="light">
+            
             <Card.Header className="text-center">{job_app.position} - {job_app.company_name}</Card.Header>
+            <Link to={`/job-app/${job_app.id}`}>{job_app.company_name}</Link>
             <Card.Body>
                 {/* <Card.Title>{job_app.company_name}</Card.Title> */}
                 <Card.Subtitle>
